@@ -1,13 +1,14 @@
-// src/components/MainRouter.js
-import React, { useState } from 'react';
+import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './LoginPage';
 import RegistrationPage from './RegistrationPage';
 import UserPage from './UserPage';
 import AdminPage from './AdminPage';
+import useStore from '../store';
 
 const MainRouter = () => {
-  const [currentForm, setCurrentForm] = useState('login');
+  const currentForm = useStore(state => state.currentForm);
+  const setCurrentForm = useStore(state => state.setCurrentForm);
 
   const handleSwitchForm = (form) => {
     setCurrentForm(form);

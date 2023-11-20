@@ -1,73 +1,145 @@
-/* src/components/NewsList.css */
-div {
-  background-color: #f8f9fa;
-  border: 1px solid #ced4da;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-h2 {
-  color: #007bff;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 8px;
-  font-size: 16px;
-  color: #495057;
-}
-
-/* src/components/RegistrationPage.css */
-div {
-  background-color: #f8d7da;
-  border: 1px solid #f5c6cb;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-h2 {
-  color: #721c24;
-}
-
-form {
+/* LoginPage.css */
+.login-page {
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-label {
-  margin-bottom: 8px;
-  font-size: 16px;
-  color: #721c24;
-}
-
-input {
-  margin-bottom: 16px;
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #f5c6cb;
-  border-radius: 5px;
-}
-
-button {
-  background-color: #dc3545;
+  justify-content: center;
+  align-items: center;
   color: white;
+}
+
+.login-page .form-container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  max-width: 80%;
+}
+
+.login-page .input-field {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center; 
+}
+
+.login-page .input-field label {
+  width: 90px; 
+  margin-right: 10px; 
+  /* text-align: right; */
+}
+
+.login-page .input-field input {
+  flex: 1; 
+  width: 100%;
   padding: 12px;
   border: none;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
 }
 
-button:hover {
-  background-color: #c82333;
+.login-page .input-field::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 8px;
+}
+
+.login-page button {
+  background: #ff5e62;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.login-page .switch-btn {
+  margin-top: 15px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+
+/* RegistrationPage.css */
+.registration-page {
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.registration-page .form-container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  max-width: 80%;
+}
+
+.registration-page .input-field {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.registration-page .input-field label {
+  width: 90px; 
+  margin-right: 10px; 
+  /* text-align: right; */
+}
+
+.registration-page .input-field input {
+  flex: 1; /* Заполняет доступное пространство */
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.registration-page .input-field::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 8px;
+}
+
+.registration-page button {
+  background: #5b86e5;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.registration-page .switch-btn {
+  margin-top: 15px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.title-input {
+  /* padding-right: 10px; */
+}
+
+.label {
+  padding-right: 10px;
+  /* text-align: right; */
+}
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input{
+  font-size: 16px;
 }
