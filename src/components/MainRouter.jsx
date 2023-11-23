@@ -1,9 +1,10 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import LoginPage from './LoginPage';
-import RegistrationPage from './RegistrationPage';
-import UserPage from './UserPage';
-import AdminPage from './AdminPage';
+import LoginPage from '../screens/LoginPage';
+import RegistrationPage from '../screens/RegistrationPage';
+import UserPage from '../screens/UserPage';
+import AdminPage from '../screens/AdminPage';
+import NewsList from '../screens/NewsList'; 
 import useStore from '../store';
 
 const MainRouter = () => {
@@ -26,6 +27,7 @@ const MainRouter = () => {
       />
       <Route path="/admin" element={<AdminPage />} />
       <Route path="/user" element={<UserPage />} />
+      <Route path="/news" element={<NewsList />} /> 
       <Route path="/" element={<Navigate to={`/${currentForm}`} />} />
     </Routes>
   );
